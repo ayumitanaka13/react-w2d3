@@ -6,6 +6,7 @@ import Search from "./Search";
 
 function Ingredients() {
   const [userIngredients, setUserIngredients] = useState([]);
+
   useEffect(() => {
     fetch(
       "https://react-hooks-98ff6-default-rtdb.firebaseio.com/ingredients.json"
