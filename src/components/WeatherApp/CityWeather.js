@@ -11,9 +11,12 @@ const CityWeather = (props) => {
       // console.log(resp.data);
       setCity(resp.data);
     };
-
     getWeather();
   }, [props.cityName]);
+
+  if (!city.weather) {
+    return <h1>Loading...</h1>;
+  }
 
   const iconUrl =
     city && `http://openweathermap.org/img/w/${city.weather[0].icon}.png`;
