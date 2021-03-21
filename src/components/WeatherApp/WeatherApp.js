@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CityWeather from "./CityWeather";
 
-const WeatherApp = (props) => {
+const WeatherApp = () => {
   const [enteredCity, setEnteredCity] = useState("");
   const [enteredCityWeather, setEnteredCityWeather] = useState("");
 

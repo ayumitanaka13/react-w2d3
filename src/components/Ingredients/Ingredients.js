@@ -26,10 +26,10 @@ function Ingredients() {
   // }, []);
 
   useEffect(() => {
-    console.log("Rendering", userIngredients);
-    return () => {
-      console.log("This component will be unmounted");
-    };
+    console.log("Rendering...", userIngredients);
+    // return () => {
+    //   console.log("This component will be unmounted");
+    // };
   }, [userIngredients]);
 
   const addIngredientHandler = (ingredients) => {
@@ -71,7 +71,6 @@ function Ingredients() {
   return (
     <div className="App">
       <IngredientForm onAddIngredient={addIngredientHandler} />
-
       <section>
         <Search onLoadIngredients={filteredIngredientsHandler} />
         <IngredientList
